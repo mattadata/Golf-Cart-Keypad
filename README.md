@@ -9,6 +9,8 @@ This runs on Arduino. List of supplies are:
 	2 LED holders - https://amzn.to/3n9HtmD  
 	Toggle switch - https://amzn.to/3F5onnQ  
 
+The 3D printed mounting plate is for a dash overlay on EZGO TXT.  
+
 Theory of operation:  
 The toggle switch controls the 12V to the arduino board, so it must be flipped on to power the arduino. Once arduino boots up and is ready, the red LED will come on. It will flash once when each digit is entered as feedback. After 4 keys are pressed, red lights will flash many times if code is wrong....or is code is correct, red light will go off and green ligth will come on. After correct code, all user input is ignored. To turn the golf cart off, flip the toggle switch off which will remove all power from the arduino board and the relay will switch off also.  
 
