@@ -1,9 +1,9 @@
 # Golf-Cart-Keypad
-Trigger a relay based on correct 4 digit code being entered. 
-This runs on Arduino. List of supplies are:
-Arduino Nano Clone - https://amzn.to/3n7YXjg
-Relay module - https://amzn.to/3nc3yko
-3X4 keypad - https://amzn.to/30p4rOa
+Trigger a relay based on correct 4 digit code being entered.   
+This runs on Arduino. List of supplies are:  
+Arduino Nano Clone - https://amzn.to/3n7YXjg  
+Relay module - https://amzn.to/3nc3yko  
+3X4 keypad - https://amzn.to/30p4rOa  
 2 5mm LEDs - https://amzn.to/3nbDJRQ
 2 resitors - https://amzn.to/31XS783 (~68 to 150 ohm depending on how bright you want LEDs)
 2 LED holders - https://amzn.to/3n9HtmD
