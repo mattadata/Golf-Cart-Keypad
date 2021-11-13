@@ -11,6 +11,8 @@ This runs on Arduino. List of supplies are:
 
 The 3D printed mounting plate is for a [dash overlay on EZGO TXT.](https://amzn.to/3Dd5rTJ)
 
+![keypad](https://lh3.googleusercontent.com/pw/AM-JKLXAtxCv6vdEhmWcZlglxREqPbPp1VpDbThoylq-EOLQNLOq7MS0QafxcthIAH_deXTQVTCX1l-JZqem4VNlaG9gKcnMbbpwO8IRIt1IXvgVqdxFcPrjoMg_FC_ZQF5WrBMOoGlcNYzmvYOk3uvEGca17A=w1652-h937-no?authuser=0)
+
 ### Theory of operation:  
 The toggle switch controls the 12V to the arduino board, so it must be flipped on to power the arduino. Once arduino boots up and is ready, the red LED will come on. It will flash once when each digit is entered as feedback. After 4 keys are pressed, red lights will flash many times if code is wrong....or is code is correct, red light will go off and green light will come on. After the correct code, all user input is ignored. To turn the golf cart off, flip the toggle switch off, which will remove all power from the arduino board and the relay will switch off also.  
 
