@@ -1,16 +1,20 @@
 #include <Keypad.h>
 
+#define ON 1
+#define OFF 0
 #define Password_Length 5 
 
-int RelayPin    = 10 ;
+int RelayPin    = 13;
 int RedLEDPin   = 12;
 int GreenLEDPin = 11;
+int DoorPin     = 10;
 
 char Data[Password_Length]; 
 char Master[Password_Length] = "1234"; 
 byte data_count = 0, master_count = 0;
 bool Pass_is_good = false;
 char customKey;
+char doorKey = '*';
 
 const byte ROWS = 4;
 const byte COLS = 3;
@@ -35,12 +39,14 @@ Keypad customKeypad = Keypad(makeKeymap(hexaKeys), rowPins, colPins, ROWS, COLS)
 
 void setup(){
   pinMode(RelayPin, OUTPUT);
+  pinMode(DoorPin, OUTPUT);
   pinMode(RedLEDPin, OUTPUT);
   pinMode(GreenLEDPin, OUTPUT);
   Serial.begin(9600);
   Serial.println("Enter Password:");
   digitalWrite(RedLEDPin, HIGH);
-  digitalWrite(RelayPin, LOW);
+  digitalWrite(RelayPin, OFF);
+  digitalWrite(DoorPin,  OFF);
 }
 
 void loop(){
@@ -53,6 +59,14 @@ void loop(){
       delay(100);
       digitalWrite(RedLEDPin, HIGH);
     }
+    else if (Pass_is_good == true)
+      {if(doorKey == customKey) {
+          Serial.println("Door Relay");
+          digitalWrite(DoorPin, ON);
+          digitalWrite(RedLEDPin, HIGH);
+          delay(1500);
+          digitalWrite(DoorPin, OFF);}
+          digitalWrite(RedLEDPin, LOW);}
     data_count++; 
     }
 
@@ -62,10 +76,11 @@ void loop(){
       Serial.println("Correct");
       digitalWrite(GreenLEDPin, HIGH);
       digitalWrite(RedLEDPin, LOW);
-      digitalWrite(RelayPin, HIGH); 
+      digitalWrite(RelayPin, ON); 
       Pass_is_good = true;
       //delay(5000);
-      //digitalWrite(RelayPin, LOW);
+      //digitalWrite(RelayPin, OFF);
+      
       }
     else if (Pass_is_good == false){
       Serial.println("Incorrect");
