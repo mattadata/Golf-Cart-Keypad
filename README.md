@@ -16,8 +16,8 @@ The 3D printed mounting plate is for a [dash overlay on EZGO TXT.](https://amzn.
 [YouTube video](https://youtu.be/AAmUD4x4r4M)
 
 ### Theory of operation:  
-The toggle switch controls the 12V to the arduino board, so it must be flipped on to power the arduino. Once arduino boots up and is ready, the red LED will come on. It will flash once when each digit is entered as feedback. After 4 keys are pressed, red lights will flash many times if code is wrong....or is code is correct, red light will go off and green light will come on and the relay will be trigged. The two wires that used to be connected to the keyswitch should be connected to the relay. This will turn the golf cart on. After the correct code, all user input is ignored. To turn the golf cart off, flip the toggle switch off, which will remove all power from the arduino board and the relay will switch off also.  
+The toggle switch controls the 12V to the arduino board, so it must be flipped on to power the arduino. Once arduino boots up and is ready, the red LED will come on. It will flash once when each digit is entered as feedback. After 4 keys are pressed, red lights will flash many times if code is wrong....or is code is correct, red light will go off and green light will come on and the relay will be trigged. The two wires that used to be connected to the keyswitch should be connected to the relay. This will turn the golf cart on. After the correct code, you can this press * on the keypad to trigger a second relay connected to an old garage door remote. This will open and close the garage. To turn the golf cart off, flip the toggle switch off, which will remove all power from the arduino board and the relay will switch off also.  
 
 ### TODO: 
 The 4 digit code is hardcoded in a variable. It needs to be set from the user interface.  
-Add second relay to control garage door opener from keypad
+~~Add second relay to control garage door opener from keypad~~
